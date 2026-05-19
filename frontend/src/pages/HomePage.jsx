@@ -117,15 +117,19 @@ const HomePage = () => {
         ) : visibleProducts.map(product => (
           <div key={product.id} className="card" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '100%' }}>
             <div>
-              {product.imageUrl ? (
-                <img src={product.imageUrl} alt={product.productName} className="product-image" />
-              ) : (
-                <div className="product-image" style={{ backgroundColor: '#e2e8f0', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  <span style={{ color: 'var(--text-light)' }}>No Image</span>
-                </div>
-              )}
-              
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+             <img
+  src={product.imageUrl}
+  alt={product.productName}
+  className="product-image"
+  style={{
+    objectFit: "cover",
+    borderRadius: "12px",
+    width: "100%",
+    height: "220px"
+  }}
+/>
+   
+             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
                 <h3 style={{ fontSize: '1.25rem', marginBottom: '0.5rem', fontWeight: '700' }}>{product.productName}</h3>
                 <span className="badge">{product.category || 'General'}</span>
               </div>

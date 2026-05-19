@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" rx="24" fill="#fb7185"/>
+  <text x="50%" y="45%" dominant-baseline="middle" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="34" fill="#0f172a">Coconut Water</text>
+  <text x="50%" y="70%" dominant-baseline="middle" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="18" fill="#0f172a">Beverages</text>
+</svg>
