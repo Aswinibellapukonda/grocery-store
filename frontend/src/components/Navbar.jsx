@@ -75,6 +75,7 @@ const Navbar = () => {
           <>
             <Link to="/cart">Cart</Link>
             <Link to="/orders">Orders</Link>
+            <Link to="/profile">Profile</Link>
             {isAdmin && <Link to="/admin" style={{ color: 'var(--primary)' }}>Admin</Link>}
             <button onClick={handleLogout} className="btn btn-secondary" style={{ padding: '0.4rem 1rem', marginLeft: '0.5rem' }}>Logout</button>
           </>

@@ -5,18 +5,19 @@ const OrdersPage = () => {
   const [orders, setOrders] = useState([]);
 
   useEffect(() => {
-    api.get('/orders/myorders')
-      .then(response => setOrders(response.data))
-      .catch(error => console.error('Error fetching orders', error));
+    api.get("/orders/all")
+      .then((res) => setOrders(res.data))
+      .catch((err) => console.log(err));
   }, []);
 
   return (
-    <div style={{maxWidth: '800px', margin: '0 auto'}}>
-      <h2 style={{marginBottom: '2rem'}}>Your Orders</h2>
-      {orders.length === 0 ? (
-        <p>You have no orders yet.</p>
-      ) : (
-        <div style={{display: 'flex', flexDirection: 'column', gap: '1.5rem'}}>
+  <div style={{maxWidth: '800px', margin: '0 auto'}}>
+    <h2 style={{marginBottom: '2rem'}}>Your Orders</h2>
+
+    {orders.length === 0 ? (
+      <p>You have no orders yet.</p>
+    ) : (
+      <div style={{display: 'flex', flexDirection: 'column', gap: '1.5rem'}}>
           {orders.map(order => (
             <div key={order.id} className="card">
               <div style={{display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid #e2e8f0', paddingBottom: '1rem', marginBottom: '1rem'}}>

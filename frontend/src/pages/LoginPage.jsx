@@ -11,7 +11,7 @@ const LoginPage = () => {
     e.preventDefault();
     try {
       const response = await api.post('/auth/signin', { username, password });
-      localStorage.setItem('token', response.data.token);
+      localStorage.setItem("token", response.data.accessToken);
       navigate('/');
     } catch (error) {
       alert('Login failed!');
